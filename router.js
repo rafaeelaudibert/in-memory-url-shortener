@@ -1,5 +1,5 @@
 const express = require('express');
-const shortid = require('shortid')
+const { nanoid } = require('nanoid')
 const router = express.Router();
 
 // Ideal scenario
@@ -42,7 +42,7 @@ router.get('/shorten', function (req, res) {
   // If we haven't generated a short URL for the long URL, generate it
   // adding to both the "indexes" in our table
   if (!getFromLong(url)) {
-    const hash = shortid.generate()
+    const hash = nanoid(8)
     set(url, hash)
   }
 

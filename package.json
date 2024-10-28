@@ -10,6 +10,6 @@
     "express": "^4.21.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "shortid": "^2.2.16"
+    "nanoid": "^3.3.7"
   }
 }
